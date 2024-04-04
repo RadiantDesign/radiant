@@ -13,6 +13,66 @@ body{
 a {
     text-decoration: none;
 }
+#preloader{
+       overflow: hidden;
+}
+.container-preload {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centriranje elementa */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    max-width: 80vw; /* Ograničite maksimalnu širinu */
+}
+
+.preload-bg {
+    width: 100%;
+    height: 100%;
+}
+.container-preload h1 {
+    font-size: 32px;
+    font-weight: 400;
+    width: 80vw;
+    text-align: center;
+}
+
+.preloadspan{
+    background: -webkit-linear-gradient(#fbf5ff, #e1b7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.loading-bar{
+    width: 240px;
+    height: 8px;
+    border: 1px solid #f4e4ff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.loading{
+    width: 1px;
+    height: 6px;
+    background: -webkit-linear-gradient(#fbf5ff, #e1b7ff);
+    border-radius: 5px;
+    animation: loading 2500ms linear;
+}
+
+@keyframes loading {
+    100%{
+        width: 250px;
+    }
+} 
+
+/*///////////////// main content //////////////////////////////////////////*/
 
 .landing{
     height: 100vh;
@@ -28,7 +88,7 @@ a {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-45%);
+    transform: translate(-50%,-50%);
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -48,7 +108,7 @@ a {
 }
 
 .landingcont h2{
-    background: -webkit-linear-gradient(#fbf5ff, #b072dc);
+    background: -webkit-linear-gradient(#fbf5ff, #d09ff4);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,7 +129,7 @@ font-weight: 600;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-   
+    justify-content: center;
 }
 
 .landingbubble p {
@@ -83,7 +143,7 @@ font-weight: 600;
 #stars{
     width: 24px;
     height: 22px;
-    margin-left: 28px;
+    margin-left: -5px;
 }
 
 .designers{
@@ -102,7 +162,7 @@ font-weight: 600;
     transform: translateX(-50%); /* Adjust horizontally */
     display: flex;
     flex-direction: column;
-    align-items: center;
+   align-items: center;
 }
 .scrollanim{
     height: 52px;
@@ -111,6 +171,9 @@ font-weight: 600;
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    position: relative; /* Dodajte relativnu poziciju */
+    left: 50%; /* Centrirajte horizontalno */
+    transform: translateX(-50%); /* Pomerite ga ulevo za polovinu njegove širine */
 }
 
 .scrollball{
@@ -136,6 +199,7 @@ font-weight: 600;
     font-size: 12px;
     padding-top: 10px;
     font-weight: 400;
+    text-align: center;
 }
 
 
@@ -1638,20 +1702,52 @@ width: 320px;
 }
 
 .top {
-    position: absolute;
+    position: relative; /* Promenjeno u relativno */
     width: 100vw;
     height:auto;
 }
-
-.mobile-nav-toggle { 
-    height:20px;
-    width: 25px;
-margin-top: 36px;
-    position: fixed;
-    right: 24px;
-    z-index: 9999;
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 32px; /* Udaljenost od gornje ivice */
+    right: 24px; /* Udaljenost od desne ivice */
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
+.langselect {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+#en, #sr {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#en {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#sr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c1b9c8;
+}
+
+.mobile-nav-toggle {
+    height: 20px;
+    width: 25px;
+    z-index: 9999;
+}
 
 #nav { 
     position: fixed;
@@ -1867,6 +1963,44 @@ margin-top: 36px;
 
 @media screen and (min-width:767px) and (max-width:1023px){
 
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 32px; /* Udaljenost od gornje ivice */
+    right: 32px; /* Udaljenost od desne ivice */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.langselect {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+#en, #sr {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#en {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#sr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c1b9c8;
+}
+
+
 .landingcont{  
      transform: translate(-50%,-50%);
  }
@@ -1956,16 +2090,7 @@ margin-top: 36px;
     
 
 
-.mobile-nav-toggle { 
-        height:24px;
-        width: 30px;
-    margin-top: 44px;
-        position: fixed;
-        right: 36px;
-        z-index: 9999;
-}
-    
-  
+
 .navbtns{
     height: 500px;
 }
@@ -2620,6 +2745,49 @@ width: 75vw;
 
 @media screen and (width:820px) {
 
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 32px; /* Udaljenost od gornje ivice */
+    right: 32px; /* Udaljenost od desne ivice */
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.langselect {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+#en, #sr {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#en {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#sr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c1b9c8;
+}
+
+.mobile-nav-toggle {
+    height: 20px;
+    width: 25px;
+    z-index: 9999;
+}
+
     .landingcont{  
          transform: translate(-50%,-50%);
      }
@@ -2706,17 +2874,6 @@ width: 75vw;
             transform: translateY(48px);
          }
         }
-        
-    
-    
-    .mobile-nav-toggle { 
-            height:24px;
-            width: 30px;
-        margin-top: 44px;
-            position: fixed;
-            right: 36px;
-            z-index: 9999;
-    }
         
       
     .navbtns{
@@ -3371,6 +3528,49 @@ width: 75vw;
     }
 
 @media screen and (width:912px) {
+
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 32px; /* Udaljenost od gornje ivice */
+    right: 32px; /* Udaljenost od desne ivice */
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.langselect {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+#en, #sr {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#en {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#sr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c1b9c8;
+}
+
+.mobile-nav-toggle {
+    height: 20px;
+    width: 25px;
+    z-index: 9999;
+}
 
         .landingcont{  
              transform: translate(-50%,-50%);
@@ -4213,15 +4413,49 @@ width: 75vw;
                 
             
             
-            .mobile-nav-toggle { 
-                    height:24px;
-                    width: 30px;
-                margin-top: 56px;
-                    position: fixed;
-                    right: 48px;
-                    z-index: 9999;
-            }
-                
+          
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 40px; /* Udaljenost od gornje ivice */
+    right: 48px; /* Udaljenost od desne ivice */
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.langselect {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+#en, #sr {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#en {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#sr {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c1b9c8;
+}
+
+.mobile-nav-toggle {
+    height: 20px;
+    width: 25px;
+    z-index: 9999;
+}
               
             .navbtns{
                 height: 500px;
@@ -4884,6 +5118,9 @@ width: 75vw;
     display: none;
 }
 
+.mobile-nav-toggle{
+    display: none;
+}
 
 .landingcont h1{
     font-size: 115px;
@@ -5881,6 +6118,9 @@ border: 0.8px solid rgb(88, 58, 100);
         display: none;
     }
     
+    .mobile-nav-toggle{
+        display: none;
+    }
     
     .landingcont h1{
         font-size: 115px;
