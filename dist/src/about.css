@@ -97,7 +97,7 @@ a {
 
 
 .navbtns{
-    margin-top: 80px;
+    margin-top: 64px;
     height: 500px;
 }
 
@@ -1070,7 +1070,7 @@ top: 2px;
 
 
 .navbtns{
-    margin-top: 80px;
+    margin-top: 70px;
     height: 500px;
 }
 
@@ -1238,7 +1238,7 @@ top: 2px;
 
 
 .navbtns{
-    margin-top: 80px;
+    margin-top: 70px;
     height: 500px;
 }
 
@@ -1402,7 +1402,7 @@ top: 2px;
 
 
 .navbtns{
-    margin-top: 80px;
+    margin-top: 70px;
     height: 500px;
 }
 
@@ -1465,7 +1465,7 @@ top: 2px;
 
 @media screen and (width:414px) and (height:736px){
     .navbtns{
-        margin-top: 80px;
+        margin-top: 70px;
     }
 
     #separatornav{
