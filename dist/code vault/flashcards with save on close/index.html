@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+header { background-color: white;}
+
+button {
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+padding: 20px 0;
+background-color: white;
+}
+
+.create-box{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.create-box textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.create-box button {
+    width: fit-content;
+}
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.flashcard{
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.flashcard h2 {
+    font-size: 1rem;
+}
+
+@media screen and (max-width:768px){
+    .flashcard{
+        margin: auto;
+    }
+    .flashcard{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-box{
+        width: 100%;
+    }
+    .flashcard{
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+   <header>
+<div class="container">
+    <div class="nav">
+        <h1>Flashcards</h1>
+        <div>
+            <button onclick="showCreateCardBox()">Cards</button>
+            <button onclick="delFlashcards()">Del cards</button>
+
+        </div>
+    </div>
+</div>
+   </header> 
+
+
+<div class="container">
+    <div class="create-box">
+        <h2 style="text-align: center; color:black;">Create Flashcard</h2>
+
+        <label for="question">Question</label>
+        <textarea id="question"></textarea>
+
+        <label for="answer">Answer</label>
+        <textarea id="answer"></textarea>
+        <div>
+            <button onclick="addFlashcard()">Save</button>
+            <button onclick="hideCreatebox()">Close</button>
+        </div>
+    </div>
+    <div class="flashcards"></div>
+
+</div>
+
+ 
+ <script>
+
+const flashcards = document.getElementsByClassName("flashcards")[0];
+const createBox = document.getElementsByClassName("create-box")[0];
+const question = document.getElementById("question");
+const answer = document.getElementById("answer");
+let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+contentArray.forEach(divMaker);
+function divMaker(text){
+var div = document.createElement("div");
+var h2_question = document.createElement("h2");
+var h2_answer = document.createElement("h2");
+
+div.className = 'flashcard';
+
+h2_question.setAttribute("style", "border-top:1px solid red; padding: 15px; margin-top:30px");
+h2_question.innerHTML = text.my_question;
+
+h2_answer.setAttribute("style", "text-align:center; display:none; color:red;");
+h2_answer.innerHTML = text.my_answer;
+
+div.appendChild(h2_question);
+div.appendChild(h2_answer);
+
+div.addEventListener("click", function(){
+    if(h2_answer.style.display == "none"){
+    h2_answer.style.display = "block"}
+    else {
+        h2_answer.style.display = "none"
+    }
+});
+
+flashcards.appendChild(div);
+}
+
+
+
+function addFlashcard(){
+    var flashcard_info = {
+        'my_question' : question.value,
+        'my_answer' : answer.value
+    }
+contentArray.push(flashcard_info);
+localStorage.setItem('items', JSON.stringify(contentArray));
+divMaker(contentArray[contentArray.length - 1]);
+question.value = '';
+answer.value = '';
+
+
+}
+
+function delFlashcards(){
+    localStorage.clear();
+    flashcards.innerHTML = '';
+    contentArray = [];
+}
+
+function hideCreatebox(){
+    createBox.style.display = "none";
+
+}
+
+function showCreateCardBox() {
+    createBox.style.display = "block";
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ SEKCIJA</title>
+
+
+<style>
+ body{
+    margin:0;
+    padding:0;
+    background-color: rgb(78, 78, 78);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ button[data-content]{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border:none;
+    background-color: rgb(247, 193, 193);
+    text-align: left;
+    font-size: 22px;
+    padding-left: 20px;
+  }    
+.content{
+    font-size:25px;
+    padding: 20px;
+    display: none;
+    background-color: white;
+}
+
+.active{
+    display: block;
+    height: 100%; 
+}
+
+.sekcija{margin-bottom: 10px;
+    width: 80vw;
+     border:1px solid black;}
+
+.sekcija:first-of-type{margin-top:100px;}
+.sekcija:nth-of-type(4){
+    margin-top:400px;
+    margin-bottom: 300px;
+}
+  
+
+
+</style>
+
+</head>
+<body>
+<button id="scrollto">SCROLL TO 4TH</button>
+
+<div class="sekcija">
+  
+    <button data-content="#section1">What is HTML?<i class="fa-regular fa-plus"></i></button>
+
+    <div id="section1" class="content active">HTML (HyperText Markup Language) is the fundamental language for creating web pages. It is used for structuring and organizing content on a web page using different marks or "tags". For example, <p> is used for denoting paragraphs, while <a> denotes a hyperlink.</div>
+</div>
+ 
+<div class="sekcija">
+    <button data-content="#section2">What is HTML?</button>
+    <div id="section2" class="content ">HTML (HyperText Markup Language) is the fundamental language for creating web pages. It is used for structuring and organizing content on a web page using different marks or "tags". For example, <p> is used for denoting paragraphs, while <a> denotes a hyperlink.</div>    
+</div>
+
+<div class="sekcija">   
+    <button data-content="#section3">What is HTML?</button>
+    <div id="section3" class="content ">HTML (HyperText Markup Language) is the fundamental language for creating web pages. It is used for structuring and organizing content on a web page using different marks or "tags". For example, <p> is used for denoting paragraphs, while <a> denotes a hyperlink.</div>
+</div>
+
+
+<div class="sekcija">   
+    <button data-content="#section4">What is HTML?</button>
+    <div id="section4" class="content active">HTML (HyperText Markup Language) is the fundamental language for creating web pages. It is used for structuring and organizing content on a web page using different marks or "tags". For example, <p> is used for denoting paragraphs, while <a> denotes a hyperlink.</div>
+</div>
+
+
+
+    <script>
+const bttns = document.querySelectorAll("button[data-content]") 
+
+ 
+
+ for (let btn of bttns ) {                             
+    
+
+
+     btn.addEventListener("click", (e) => {
+       
+         const sectionId = e.target.getAttribute("data-content");
+         const el = document.querySelector(sectionId);
+ 
+   
+         const activeSections = document.querySelectorAll(".content.active");
+
+         activeSections.forEach((section) => {
+             section.classList.remove('active');
+         });
+ 
+
+         if (el.classList.contains("active")) {
+             el.classList.remove('active');
+         } 
+         else {
+             el.classList.add("active");
+         }
+     });  
+ }  
+ 
+
+const btnscroll = document.getElementById("scrollto")
+btnscroll.addEventListener("click", ()=>{
+    document.querySelector(".sekcija:nth-child(4)").scrollIntoView({behavior:"smooth" });
+})
+
+
+    </script>
+</body>
+</html>
