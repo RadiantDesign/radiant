@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #calculator-container {
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            background-color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator-container">
+        <h2>Basic Calculator</h2>
+        <label for="firstNumber">First Number:</label>
+        <input type="number" id="firstNumber" step="any" required>
+        <br>
+        <label for="operation">Operation (+, -, *, /):</label>
+        <input type="text" id="operation" maxlength="1" required>
+        <br>
+        <label for="secondNumber">Second Number:</label>
+        <input type="number" id="secondNumber" step="any" required>
+        <br>
+        <button id="calculateBtn">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const calculateBtn = document.getElementById("calculateBtn");
+            const result = document.getElementById("result");
+
+            calculateBtn.addEventListener("click", function() {
+                const firstNumber = parseFloat(document.getElementById("firstNumber").value);
+                const operation = document.getElementById("operation").value;
+                const secondNumber = parseFloat(document.getElementById("secondNumber").value);
+
+                let resultValue;
+
+                switch (operation) {
+                    case "+":
+                        resultValue = firstNumber + secondNumber;
+                        break;
+                    case "-":
+                        resultValue = firstNumber - secondNumber;
+                        break;
+                    case "*":
+                        resultValue = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        resultValue = firstNumber / secondNumber;
+                        break;
+                    default:
+                        result.innerHTML = "Invalid operation. Please use +, -, *, or /.";
+                        return;
+                }
+
+                result.innerHTML = `Result: <strong>${resultValue}</strong>`;
+            });
+        });
+    </script>
+</body>
+</html>

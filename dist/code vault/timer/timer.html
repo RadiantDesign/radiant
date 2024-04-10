@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<style>
+     body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .timer{
+    color: white;
+font-size:56px;
+font-weight: bolder;
+border:5px solid white;
+padding:50px;
+border-radius:50%;
+    }
+</style>
+
+<body>
+
+  <div class="timer"></div>
+
+
+
+  <script>
+    var time=document.getElementsByClassName("timer")
+ 
+ var timings=30;
+ var i=0;
+     var myInterval = setInterval(Timeout, 1000);
+    function Timeout(){
+      if((timings*60-i)%60>=10){
+        time[0].innerHTML=parseInt(`${(timings*60-i)/60}`)+":"+`${(timings*60-i)%60}`;
+      }
+      else{
+        time[0].innerHTML=parseInt(`${(timings*60-i)/60}`)+":0"+`${(timings*60-i)%60}`;
+      }
+      
+     
+      
+i++;
+    }
+  </script>
+</body>
+</html>

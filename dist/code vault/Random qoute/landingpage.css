@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #282828;
+    background-image:  linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077);
+    background-size: 60px 105px;
+    background-position: 0 0, 0 0, 30px 53px, 30px 53px, 0 0, 30px 53px;
+    overflow-x: hidden;
+    animation: entering 0.2s ease-in;
+}
+
+
+.dailytxt{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: white;
+    margin: 4px;
+}
+
+.dailyqoute{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CFF9C6;
+    margin-top: 16px;
+    border-radius: 20px;
+    padding: 16px;
+}
+.dailyqoute p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+}
+
+#refreshqoute {
+  background-color: black;
+  border:1px solid black;
+}
+
+#refreshqoute p {
+  color: white;
+}
+
+

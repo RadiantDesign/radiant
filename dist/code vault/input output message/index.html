@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container" style="display:flex; justify-content: center; align-items: center; height: 100vh; width: 80vh; margin: auto;">
+<div class="message" style="border: 1px solid black;">
+
+ <p>
+<h3 style="text-align: center;"></h3>
+</p>
+<p>
+<label for="message-input">Enter message</label>
+<br>
+<button style="border-radius:10px; width:
+50px; height: 50px; padding: 10px;"><i class="far fa-envelope"></i></button>
+<input style="height:30px; width:300px;" id="message-input" type="text"> 
+</p>
+<p>
+    <button  style="border-radius:10px; width:
+    80px; height: 50px; padding: 10px;" onclick="getMessage()">Submit</button>
+</p>
+<p id="message-output" style="text-align:center; border:1px solid black;"></p>
+
+
+
+</div>
+</div>
+
+<script>
+
+const messageInput = document.getElementById("message-input");
+
+function getMessage(){
+document.getElementById("message-output").innerHTML = messageInput.value;
+messageInput.value = "";
+
+}
+
+messageInput.addEventListener("keydown", function(e){
+    if(e.key == "Enter")
+        getMessage();
+    
+
+})
+
+</script>
+</body>
+</html>
