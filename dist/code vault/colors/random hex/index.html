@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+p{font-size: 50px; margin-top: 200px;}
+
+button{
+    margin-bottom: 200px;
+}
+</style>
+</head>
+<body>
+    
+    <div class="container">
+    <p>HEX color is : #<span id="hex-code">000000</span></p>
+<button onclick="changeColor()" id="btn">Random color</button>
+    </div>
+
+<script>
+
+
+function changeColor() {
+
+var hex_numbers = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+
+var hexcode = '';
+
+for(var i=0; i < 6; i++ ) {
+ var random_index = Math.floor(Math.random() * hex_numbers.length);
+ hexcode += hex_numbers[random_index]
+}
+document.getElementById("hex-code").innerHTML = hexcode;
+document.getElementsByTagName("body")["0"].style.background = "#" + hexcode
+
+}
+
+</script>
+
+</body>
+</html>

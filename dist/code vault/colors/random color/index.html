@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+body{margin: 0; padding:0;}
+.container{height: 100vh; display: flex; justify-content: center;
+ align-items: center;}
+ #btn{padding: 16px; height: 56px; width: 130px; background-color: rgb(62, 111, 244); color: white; border: 0.3px solid white; border-radius: 10px;}
+</style>
+
+</head>
+<body>
+    
+
+<div class="container">
+    <p> Hex color is : # <span id="hex"></span></p>
+    <button onclick="ChangeColors()" id="btn">Generate Random Color</button>
+</div>
+
+
+<script>
+
+     function ChangeColors(){
+const r = Math.floor(Math.random()*255);
+const g = Math.floor(Math.random()*255);
+const b = Math.floor(Math.random()*255);
+document.querySelector("body").style.background = `rgb(${r},${g},${b})`;
+
+}
+
+
+</script>
+</body>
+</html>
