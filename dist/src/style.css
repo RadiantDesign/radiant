@@ -105,6 +105,7 @@ font-weight: 600;
     display: flex;
     flex-direction: column;
    align-items: center;
+   justify-content: center;
 }
 .scrollanim{
     height: 52px;
@@ -113,9 +114,7 @@ font-weight: 600;
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    position: relative; /* Dodajte relativnu poziciju */
-    left: 50%; /* Centrirajte horizontalno */
-    transform: translateX(-50%); /* Pomerite ga ulevo za polovinu njegove širine */
+
 }
 
 .scrollball{
