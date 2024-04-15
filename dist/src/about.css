@@ -89,17 +89,13 @@ a {
     z-index: 1000;
     transform: translateX(100%);
     align-items: center;
+    gap: 40px;
 }
 
 #nav[data-visible="true"]{
     transform: translateX(0%);
 }
 
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
 
 .navbtn,
 .navbtncontact {  
@@ -112,8 +108,8 @@ a {
     font-weight: 500;
 }
 
- .name{
-    margin-top: 80px;
+ .name-nav{
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +117,7 @@ a {
     gap: 24px;
 }
 
-.name img {
+.name-nav img {
     width: 64px;
     height: 64px;
 }
@@ -138,22 +134,17 @@ a {
     font-size: 50px;
     text-align: center;
     font-weight: 600;
+    margin-top: 0;
 }
 
-.navbtns .socials {
-    padding-inline: 24px;
+.socials-nav {
+    margin-left: 0;
     display: flex;
-    margin-top: 64px;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-around;
+    margin-top: 12px;
 }
 
-
-#separatornav{
-    position: relative;
-    top:80px;
-    margin-bottom: 50px;
-}
 
 .landing{
     height: 100vh;
@@ -945,21 +936,7 @@ top: 2px;
 
 
 @media screen and (max-height:800px){
-    .navbtns .socials {
-        margin-top:30px;
-        margin-left: 24px;
-    }
 
-    
-#separatornav{
-    position: relative;
-    top: 50px;
-}
-
-.navbtns{
-    margin-top: 50px;
-    height: 500px;
-}
 
 
     .lang-toggle-wrapper {
@@ -1053,82 +1030,6 @@ top: 2px;
     z-index: 9999;
 }
 
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
-}
-
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.logonav1{
-    background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbtns .socials {
-    padding-inline: 24px;
-    display: flex;
-    margin-top: 64px;
-    align-items: baseline;
-    justify-content: space-around;
-}
-
-
-#separatornav{
-    position: relative;
-    top:80px;
-    margin-bottom: 50px;
-}
     
 }
 
@@ -1221,263 +1122,11 @@ top: 2px;
     z-index: 9999;
 }
 
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
 }
 
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.logonav1{
-    background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbtns .socials {
-    padding-inline: 24px;
-    display: flex;
-    margin-top: 80px;
-    align-items: baseline;
-    justify-content: space-around;
-}
-
-
-#separatornav{
-    position: relative;
-    top:80px;
-    margin-bottom: 50px;
-}
-}
-
-@media screen and (max-width:365px){
-
-    .navbtns .socials {
-        display: flex;
-        margin-top: 40px;
-        align-items: baseline;
-        justify-content: space-around;
-        margin-inline: auto;
-    }
-    
-    
-    #separatornav{
-        position: relative;
-        top:80px;
-        margin-bottom: 50px;
-    }
-
- 
-.top {
-    position: relative; /* Promenjeno u relativno */
-    width: 100vw;
-    height:auto;
-}
-.lang-toggle-wrapper {
-    position: absolute;
-    top: 32px; /* Udaljenost od gornje ivice */
-    right: 24px; /* Udaljenost od desne ivice */
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.langselect {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    color: white;
-}
-
-.langselect button {
-    font-size: 20px;
-    font-weight: 500;
-    color: #c1b9c8;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-inline: 4px;
-}
-
-.langselect button.active {
-    color: white;
-    font-weight: 600;
-}
-
-
-.mobile-nav-toggle {
-    height: 20px;
-    width: 25px;
-    z-index: 9999;
-}
-
-
-
-    .landingcont{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    
-    .landingcont h1{
-        background: -webkit-linear-gradient(#fbf5ff, #d8a2ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 800;
-        font-size: 39px;
-        text-align: center;
-    }
-    .landingcont h2 {
-        background: -webkit-linear-gradient(#fbf5ff, #d8a2ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 400;
-        font-size: 19px;
-        text-align: center;
-        margin-top: 6px;
-    }
-    
-    
-}
-
-@media screen and (width:375px) and (height:667px){
-
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.logonav1{
-    background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbtns .socials {
-    padding-inline: 24px;
-    display: flex;
-    margin-top: 32px;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-inline-start: auto;
-}
-
-
-#separatornav{
-    position: relative;
-    top:56px;
-    margin-bottom: 50px;
-}
-
-}
 
 @media screen and (width:414px) and (height:736px){
-    .navbtns{
-        margin-top: 80px;
-    }
-
-    #separatornav{
-        position: relative;
-        top: 80px;
-    }
-    .navbtns .socials {
-        margin-top: 40px;
-        margin-inline: auto;
-    }
+ 
     .lang-toggle-wrapper {
         position: absolute;
         top: 32px; /* Udaljenost od gornje ivice */
@@ -1517,10 +1166,7 @@ top: 2px;
         z-index: 9999;
     }
 
-    .name{
-        margin-top: 80px;
-    }
-    
+   
 
 }
 
@@ -1570,83 +1216,9 @@ top: 2px;
     width: 25px;
     z-index: 9999;
 }
-
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
-}
-
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.navbtns{
-    margin-top:120px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
+#nav{
+    gap: 120px;
     justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.logonav1{
-    background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbtns .socials {
-    padding-inline: 24px;
-    display: flex;
-    margin-top: 220px;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-inline:auto;
-}
-
-
-#separatornav{
-    position: relative;
-    top:200px;
-    margin-bottom: 50px;
 }
 
 
@@ -1739,90 +1311,10 @@ top: 2px;
     width: 25px;
     z-index: 9999;
 }
-
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
-}
-
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.logonav1{
-    font-size: 72px;
-}
-
-.navbtns{
-    margin-top:250px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
+#nav{
+    gap: 120px;
     justify-content: center;
-    align-items: center;
-    gap: 24px;
 }
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.navbtns{
-    height: 500px;
-    position: relative;
-    top: 80px;
-}
-
-.navbtn,
-.navbtncontact {  
-    font-size: 32px;
-}
-
-
-
-
-.navbtns .socials {
-    margin-top: 300px;
-    margin-left: 24px;
-    display: flex;
-    align-items: baseline;
-}
-
-
-#separatornav{
-    position: relative;
-    top: 300px;
-    margin-bottom: 50px;
-}  
 
 
 .landingcont h1{
@@ -1971,90 +1463,11 @@ top: 2px;
     width: 25px;
     z-index: 9999;
 }
-
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
-}
-
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.logonav1{
-    font-size: 72px;
-}
-
-.navbtns{
-    margin-top:250px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
+#nav{
+    gap: 120px;
     justify-content: center;
-    align-items: center;
-    gap: 24px;
 }
 
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.navbtns{
-    height: 500px;
-    position: relative;
-    top: 80px;
-}
-
-.navbtn,
-.navbtncontact {  
-    font-size: 32px;
-}
-
-
-
-
-.navbtns .socials {
-    margin-top: 300px;
-    margin-left: 24px;
-    display: flex;
-    align-items: baseline;
-}
-
-
-#separatornav{
-    position: relative;
-    top: 300px;
-    margin-bottom: 50px;
-}  
 
 
 .landingcont h1{
