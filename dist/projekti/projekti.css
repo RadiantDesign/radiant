@@ -278,17 +278,13 @@ body::before {
     z-index: 1000;
     transform: translateX(100%);
     align-items: center;
+    gap: 40px;
 }
 
 #nav[data-visible="true"]{
     transform: translateX(0%);
 }
 
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
 
 .navbtn,
 .navbtncontact {  
@@ -301,8 +297,8 @@ body::before {
     font-weight: 500;
 }
 
- .name{
-    margin-top: 80px;
+ .name-nav{
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,7 +306,7 @@ body::before {
     gap: 24px;
 }
 
-.name img {
+.name-nav img {
     width: 64px;
     height: 64px;
 }
@@ -327,22 +323,18 @@ body::before {
     font-size: 50px;
     text-align: center;
     font-weight: 600;
+    margin-top: 0;
 }
 
-.navbtns .socials {
-    padding-inline: 24px;
+.socials-nav {
+    margin-left: 0;
     display: flex;
-    margin-top: 64px;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-around;
+    margin-top: 12px;
 }
 
 
-#separatornav{
-    position: relative;
-    top:80px;
-    margin-bottom: 50px;
-}
 
 
 .gallery{
@@ -936,23 +928,7 @@ color: #f5e7ff;
 
 
   @media screen and (max-height:800px){
-    .navbtns .socials {
-        margin-top:30px;
-        margin-left: 24px;
-    }
-
-    
-#separatornav{
-    position: relative;
-    top: 50px;
-}
-
-.navbtns{
-    margin-top: 50px;
-    height: 500px;
-}
-
-
+   
     .lang-toggle-wrapper {
         position: absolute;
         top: 32px; /* Udaljenost od gornje ivice */
@@ -1000,19 +976,6 @@ color: #f5e7ff;
 
 @media screen and (max-height:760px){
 
-
-    .sample-card{
-        margin-top: 200px;
-        height: 280px;
-    }
-
-    .trust{
-        top: 120px;
-    }
-
-    .launch{
-        margin-right: 35px;
-    }
     .top {
         position: relative; /* Promenjeno u relativno */
         width: 100vw;
@@ -1057,92 +1020,11 @@ color: #f5e7ff;
         z-index: 9999;
     }
     
-    #nav { 
-        position: fixed;
-        inset: 0 0 0 0%;
-       background: rgb(53,0,120);
-        background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        transform: translateX(100%);
-        align-items: center;
-    }
-    
-    #nav[data-visible="true"]{
-        transform: translateX(0%);
-    }
-    
-    
-    .navbtns{
-        margin-top: 80px;
-        height: 500px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-         text-align: center;
-        font-size: 24px;
-        font-weight: 500;
-    }
-    
-     .name{
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-    }
-    
-    .name img {
-        width: 64px;
-        height: 64px;
-    }
-    #nav a {
-        padding: 8px;
-        text-decoration: none;
-    }
-    
-    .logonav1{
-        background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 50px;
-        text-align: center;
-        font-weight: 600;
-    }
-    
-    .navbtns .socials {
-        padding-inline: 24px;
-        display: flex;
-        margin-top: 64px;
-        align-items: baseline;
-        justify-content: space-around;
-    }
-    
-    
-    #separatornav{
-        position: relative;
-        top:80px;
-        margin-bottom: 50px;
-    }
-    
 }
 
 
-
 @media screen and (width:390px){
-    .initialcontact{
-        margin-left: 40px;
-    }
-  
+
     .lang-toggle-wrapper {
         position: absolute;
         top: 32px; /* Udaljenost od gornje ivice */
@@ -1231,82 +1113,6 @@ color: #f5e7ff;
     z-index: 9999;
 }
 
-#nav { 
-    position: fixed;
-    inset: 0 0 0 0%;
-   background: rgb(53,0,120);
-    background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    transform: translateX(100%);
-    align-items: center;
-}
-
-#nav[data-visible="true"]{
-    transform: translateX(0%);
-}
-
-
-.navbtns{
-    margin-top: 80px;
-    height: 500px;
-}
-
-.navbtn,
-.navbtncontact {  
-    background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
- .name{
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.name img {
-    width: 64px;
-    height: 64px;
-}
-#nav a {
-    padding: 8px;
-    text-decoration: none;
-}
-
-.logonav1{
-    background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.navbtns .socials {
-    padding-inline: 24px;
-    display: flex;
-    margin-top: 80px;
-    align-items: baseline;
-    justify-content: space-around;
-}
-
-
-#separatornav{
-    position: relative;
-    top:80px;
-    margin-bottom: 50px;
-}
 
 
     video{
@@ -1638,83 +1444,9 @@ color: #f5e7ff;
         width: 25px;
         z-index: 9999;
     }
-    
-    #nav { 
-        position: fixed;
-        inset: 0 0 0 0%;
-       background: rgb(53,0,120);
-        background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        transform: translateX(100%);
-        align-items: center;
-    }
-    
-    #nav[data-visible="true"]{
-        transform: translateX(0%);
-    }
-    
-    
-    .navbtns{
-        margin-top:120px;
-        height: 500px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-         text-align: center;
-        font-size: 24px;
-        font-weight: 500;
-    }
-    
-     .name{
-        margin-top: 120px;
-        display: flex;
-        flex-direction: column;
+    #nav{
+        gap: 120px;
         justify-content: center;
-        align-items: center;
-        gap: 24px;
-    }
-    
-    .name img {
-        width: 64px;
-        height: 64px;
-    }
-    #nav a {
-        padding: 8px;
-        text-decoration: none;
-    }
-    
-    .logonav1{
-        background: -webkit-linear-gradient(#ffffff,#D9C5FF ,#FED1FC);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 50px;
-        text-align: center;
-        font-weight: 600;
-    }
-    
-    .navbtns .socials {
-        padding-inline: 24px;
-        display: flex;
-        margin-top: 220px;
-        align-items: baseline;
-        justify-content: space-around;
-        margin-inline:auto;
-    }
-    
-    
-    #separatornav{
-        position: relative;
-        top:200px;
-        margin-bottom: 50px;
     }
     
     
@@ -1784,90 +1516,11 @@ color: #f5e7ff;
         width: 25px;
         z-index: 9999;
     }
-    
-    #nav { 
-        position: fixed;
-        inset: 0 0 0 0%;
-       background: rgb(53,0,120);
-        background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        transform: translateX(100%);
-        align-items: center;
-    }
-    
-    #nav[data-visible="true"]{
-        transform: translateX(0%);
-    }
-    
-    
-    .logonav1{
-        font-size: 72px;
-    }
-    
-    .navbtns{
-        margin-top:250px;
-        height: 500px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-         text-align: center;
-        font-size: 24px;
-        font-weight: 500;
-    }
-    
-     .name{
-        margin-top: 120px;
-        display: flex;
-        flex-direction: column;
+    #nav{
+        gap: 120px;
         justify-content: center;
-        align-items: center;
-        gap: 24px;
     }
     
-    .name img {
-        width: 64px;
-        height: 64px;
-    }
-    #nav a {
-        padding: 8px;
-        text-decoration: none;
-    }
-    
-    .navbtns{
-        height: 500px;
-        position: relative;
-        top: 80px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        font-size: 32px;
-    }
-    
-    
-    
-    
-    .navbtns .socials {
-        margin-top: 300px;
-        margin-left: 24px;
-        display: flex;
-        align-items: baseline;
-    }
-    
-    
-    #separatornav{
-        position: relative;
-        top: 300px;
-        margin-bottom: 50px;
-    }  
     
     .here{
         width: 60vw;
@@ -1930,90 +1583,10 @@ color: #f5e7ff;
         width: 25px;
         z-index: 9999;
     }
-    
-    #nav { 
-        position: fixed;
-        inset: 0 0 0 0%;
-       background: rgb(53,0,120);
-        background: radial-gradient(circle, rgb(35, 0, 68) 11%, rgb(16, 0, 36) 100%);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        flex-direction: column;
-        z-index: 1000;
-        transform: translateX(100%);
-        align-items: center;
-    }
-    
-    #nav[data-visible="true"]{
-        transform: translateX(0%);
-    }
-    
-    
-    .logonav1{
-        font-size: 72px;
-    }
-    
-    .navbtns{
-        margin-top:250px;
-        height: 500px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        background: -webkit-linear-gradient(#ffffff, #e1d1ff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-         text-align: center;
-        font-size: 24px;
-        font-weight: 500;
-    }
-    
-     .name{
-        margin-top: 120px;
-        display: flex;
-        flex-direction: column;
+    #nav{
+        gap: 120px;
         justify-content: center;
-        align-items: center;
-        gap: 24px;
     }
-    
-    .name img {
-        width: 64px;
-        height: 64px;
-    }
-    #nav a {
-        padding: 8px;
-        text-decoration: none;
-    }
-    
-    .navbtns{
-        height: 500px;
-        position: relative;
-        top: 80px;
-    }
-    
-    .navbtn,
-    .navbtncontact {  
-        font-size: 32px;
-    }
-    
-    
-    
-    
-    .navbtns .socials {
-        margin-top: 300px;
-        margin-left: 24px;
-        display: flex;
-        align-items: baseline;
-    }
-    
-    
-    #separatornav{
-        position: relative;
-        top: 300px;
-        margin-bottom: 50px;
-    }  
     
     
     .here{
