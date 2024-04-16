@@ -218,9 +218,23 @@
        <div class="overlay-content">
            <p class="pfeelslike">Kao da su <br> <span>3 ponude</span></p>
            <p class="pfeelsliketwo">Nudimo vam stručnost u dizajnu, kodiranju i rečima - čineći nas najboljim izborom za vaš sledeći korak u rastu vašeg poslovanja i karijere!</p>
-           <button class="worktogether">Kreirajmo zajedno</button>
+           <button class="worktogether" id="worktogether">Saradjujmo</button>
           <a href="../projekti/projekti.html"> <button class="worktogethersecond">Naši projekti</button></a>
        </div>
+       <div class="contact-overlay" style="display: none;">
+         <div class="contact-details">
+             <p>Telefon: <br> +381 65 51 41 758</p>
+             <br>
+             <p>Email: <br> webradiantt@gmail.com</p>
+             <br>
+             <div class="socials-overlay-contact">
+             <p class="instagram-contact-overlay"><a href="https://www.instagram.com/radiantdesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="../imgs/instagram.svg" alt=""></a></p>
+             <br>
+             <p><a href="#"><img src="../imgs/linkedin.svg" alt=""></a></p>
+           </div>
+             <button id="closeOverlay" class="worktogether">Zatvori</button>
+         </div>
+     </div>
     </div>
     
     <img src="../imgs/Line 2.svg" id="separatorservice">
@@ -716,11 +730,158 @@ Ime služi kao <span>obećanje</span> i <span>podsetnik</span> na moderna iskust
 </div>
 
 <div class="project-request">
-   <img src="../imgs/requestplane.svg" alt="" class="requestplane">
+   <div class="initial-requestdiv">
+   <img src="./imgs/requestplane.svg" alt="" class="requestplane">
    <div class="project-request-p">
-      <p>Hvala na vašem vremenu i <br> pokazanom interesu za naš rad. <br><br> Ovaj obrazac nam pomaže da brzo razumemo o čemu je vaš projekat, istovremeno razjašnjavajući bilo kakva važna pitanja unapred. <br><br> Molimo vas da budete što detaljniji <br> i precizniji. <br> <br> Odgovorićemo vam u roku od 48 sati.</p>
+      <p>Hvala na vremenu i <br> pokazivanju zainteresovanosti u nas rad. <br><br> Ova forma nam pokazuje o čemu je vaš projekat, dok istovremeno rešavamo sva bitna pitanja unapred.<br><br> Budite detaljni <br> i precizni što je više moguće. <br> <br> Odgovorićemo u narednih 48 sati.</p>
    </div>
-   <button class="proceed">Nastavi</button>
+   <button class="proceed">Proceed</button>
+   </div>
+
+   <div class="request-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Koje usluge su vam potrebne?</h4>
+
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>Razvoj Websajt-a | App.</p>
+         <input type="checkbox" name="development">
+         </div>
+     
+         <div class="request-option">
+         <p>Dizajn | Brending | Animacija</p>
+         <input type="checkbox" name="design">
+         </div>
+     
+         <div class="request-option">
+         <p>SEO | Pisanje </p>
+         <input type="checkbox" name="seo">
+         </div>
+     
+         <div class="request-option">
+         <p>Ostalo</p>
+         <input type="checkbox" name="other">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option">Nazad</button>
+            <button id="next-option">Dalje</button>
+         </div>  
+
+     </div>
+
+   </div>
+
+   <div class="second-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Koliko je stara kompanija?</h4>
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>Start-up / Pred-Otvaranje</p>
+         <input type="checkbox" name="startup">
+         </div>
+     
+         <div class="request-option">
+         <p>0-2 Godine</p>
+         <input type="checkbox" name="0-2 Years">
+         </div>
+     
+         <div class="request-option">
+         <p>2-5 Godine</p>
+         <input type="checkbox" name="2-5 Years">
+         </div>
+     
+         <div class="request-option">
+         <p>5+ Godine</p>
+         <input type="checkbox" name="5+ years">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option2">Nazad</button>
+            <button id="next-option2">Dalje</button>
+         </div>  
+
+     </div>
+  </div>
+
+  <div class="third-overlay" style="display: none;">
+   <h4 class="request-overlay-header">Koji vam je idealni rok?</h4>
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>2-4 Nedelje</p>
+         <input type="checkbox" name="2-4 Weeks">
+         </div>
+     
+         <div class="request-option">
+         <p>2 Meseca</p>
+         <input type="checkbox" name="2 Months">
+         </div>
+     
+         <div class="request-option">
+         <p>3 Meseca</p>
+         <input type="checkbox" name="3 Months">
+         </div>
+     
+         <div class="request-option">
+         <p>6 Meseci</p>
+         <input type="checkbox" name="6 Months">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option3">Nazad</button>
+            <button id="next-option3">Dalje</button>
+         </div>  
+
+     </div>
+   </div>
+
+   <div class="fourth-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Koji vam je budzet?</h4>
+         <div class="options-request">
+   
+            <div class="request-option">
+            <p>$1000</p>
+            <input type="checkbox" name="$1000">
+            </div>
+        
+            <div class="request-option">
+            <p>$1000 - $2000</p>
+            <input type="checkbox" name="$1000-$2000">
+            </div>
+        
+            <div class="request-option">
+            <p>$2000 - $5000</p>
+            <input type="checkbox" name="$2000-$5000">
+            </div>
+        
+            <div class="request-option">
+            <p>$5000+</p>
+            <input type="checkbox" name="$5000+">
+            </div>
+   
+            <div class="button-options">
+               <button id="prev-option4">Nazad</button>
+               <button id="next-option4">Dalje</button>
+            </div>  
+   
+        </div>
+   </div>
+
+   <div class="fifth-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Kažite sve što želite!</h4>
+      
+      <textarea rows="19" cols="40" placeholder="Dodatne informacije..." id="additional_info"></textarea>
+   
+         
+            <div class="button-options">
+               <button id="prev-option5">Nazad</button>
+               <button id="submit">Pošalji</button>
+            </div>  
+   
+        
+      </div>
+
 </div>
 
 
@@ -891,7 +1052,7 @@ Ime služi kao <span>obećanje</span> i <span>podsetnik</span> na moderna iskust
     <div class="footer-content">
        <h1 class="radiant-footer">Radiant</h1>
        <div class="socials">
-          <a href=""><img src="../imgs/instagram.svg" class="instagram" alt=""></a>
+          <a href="https://www.instagram.com/radiantdesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="../imgs/instagram.svg" class="instagram" alt=""></a>
           <a href=""><img src="../imgs/dribble.svg" class="dribble" alt=""></a>
           <a href=""><img src="../imgs/linkedin.svg" class="linkedin"  alt=""></a>
           <a href=""><img src="../imgs/behance.svg" class="behance" alt=""></a>
@@ -911,9 +1072,11 @@ Ime služi kao <span>obećanje</span> i <span>podsetnik</span> na moderna iskust
  <script src="bottomnav.js"></script>
  <script src="navbar.js"></script>
  <script src="infinitescroller.js"></script>
+ <script src="contact-modal.js"></script>
  <script src="horizontalscroll.js" ></script>
  <script src="tabswitch.js"></script>
  <script src="counter.js"></script>
+ <script src="src/project-request.js"></script>
  <script src="accordions.js"></script>
  <script src="switchtabs-accordions.js"></script>
  </body>
