@@ -599,6 +599,57 @@ video{
     transform: translateY(-5px);
 }
 
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;background: rgb(53,0,120);
+    background: radial-gradient(circle, #39006f 11%, #000124 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.contact-details {
+    color: #f0e7fe;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.contact-details a {
+    color: #d4bffa;
+}
+
+#closeOverlay {
+    margin-top: 32px;
+}
+
+.socials-overlay-contact{
+    width: 100px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.instagram-contact-overlay{
+    position: relative;
+    top:2px;
+}
+
 .servicemargin{
     padding-top: 40px;
 }
@@ -1254,7 +1305,7 @@ color: white;
 }
 
 .hey{
-    color: white;
+    color: #f2ecff;
     font-size: 20px;
     margin-bottom: 16px;
     font-weight: 300;
@@ -1262,7 +1313,7 @@ color: white;
 }
 
 .who-radiant{
-    color: white;
+    color: #f2ecff;
     font-weight: 200;
     width: 300px;
     font-size: 18px;
@@ -1299,7 +1350,7 @@ color: white;
 }
 .project-request-p p {
     font-size: 18px;
-color: white;
+color: #f2ecff;
 font-weight: 200;
 width: 320px;
 }
@@ -1319,6 +1370,111 @@ width: 320px;
     padding-block: 12px;
     width: 150px;
 }
+
+
+.project-request {
+    position: relative;
+}
+
+.request-overlay,
+.second-overlay,
+.third-overlay,
+.fourth-overlay,
+.fifth-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(53,0,120);
+    background: radial-gradient(circle, rgb(57, 0, 111) 11%, rgba(0,1,36,1) 100%);
+    display: none;
+    z-index: 10;
+}
+
+.request-overlay.visible,
+.second-overlay.visible,
+.third-overlay.visible,
+.fourth-overlay.visible,
+.fifth-overlay.visible{
+    display: unset;
+}
+
+.request-overlay-header{
+  color: #e3d4ff;
+    text-align: center;
+    margin-inline: auto;
+    margin-top: 40px;
+    font-size: 30px;
+    width: 80%;
+}
+
+
+.request-option{
+    padding-block: 16px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+    border: 1px solid #9974e3;
+    border-radius: 20px;
+    margin-block: 24px;
+    color: #e3d4ff;
+}
+
+.request-option input {
+    width: 16px;
+    height: 16px;
+    
+}
+
+.button-options{
+    margin-top: 32px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+#next-option,
+#next-option2,
+#next-option3,
+#next-option4,
+#submit{
+    background: -webkit-linear-gradient(#ffffff, #d4bffa, #fdddfb);
+    color: #48007F;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding-block: 12px;
+    width: 120px;
+}
+
+#prev-option,
+#prev-option2,
+#prev-option3,
+#prev-option4,
+#prev-option5 {
+    background: none;
+    color: #d1bef7;
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid #d1bef7;
+    border-radius: 15px;
+    outline: none;
+    padding-block: 12px;
+    width: 120px;
+    margin-right: 6px;
+}
+
+textarea {
+     margin-top: 24px;
+     padding-left: 12px;
+     padding-top: 12px;
+}
+
 
 .faq-section{
     width: 100vw;
@@ -2567,6 +2723,10 @@ video{
     outline: none;
 }
 
+.contact-overlay {
+    border-radius: 40px;
+}
+
 #separatorservice{
     width: 100vw;
     position: relative;
@@ -3324,6 +3484,10 @@ width: 75vw;
         transform: translateY(0);
         margin-bottom: 0;
         outline: none;
+    }
+
+    .contact-overlay {
+        border-radius: 40px;
     }
     
     #separatorservice{
@@ -4128,6 +4292,10 @@ width: 75vw;
             margin-bottom: 0;
             outline: none;
         }
+
+        .contact-overlay {
+            border-radius: 40px;
+        }
         
         #separatorservice{
             width: 100vw;
@@ -4895,6 +5063,10 @@ width: 75vw;
                 outline: none;
             }
             
+            .contact-overlay {
+                border-radius: 40px;
+            }
+
             #separatorservice{
                 width: 100vw;
                 position: relative;
@@ -5605,6 +5777,16 @@ video{
 .worktogether:hover,
 .worktogethersecond:hover {
     transform: translateY(-5px);
+}
+
+
+.contact-overlay,
+.request-overlay,
+.second-overlay,
+.third-overlay,
+.fourth-overlay,
+.fifth-overlay {
+    border-radius: 40px;
 }
 
 #separatorservice{
@@ -6638,6 +6820,15 @@ border: 0.8px solid rgb(88, 58, 100);
     .worktogether:hover,
     .worktogethersecond:hover {
         transform: translateY(-5px);
+    }
+
+    .contact-overlay,
+    .request-overlay,
+    .second-overlay,
+    .third-overlay,
+    .fourth-overlay,
+    .fifth-overlay {
+        border-radius: 40px;
     }
     
     #separatorservice{
