@@ -214,8 +214,22 @@
    <div class="overlay-content">
        <p class="pfeelslike">It feels like <br> <span>3 offers</span> in one</p>
        <p class="pfeelsliketwo">We provide expert proficiency in design, code and words - making us the ultimate choice for your next step in growing your business & career!</p>
-       <button class="worktogether">Let's work together</button>
-      <a href="projekti/projects.html"><button class="worktogethersecond">See our work</button></a>  
+       <button id="worktogether" class="worktogether">Let's work together</button>
+       <a href="projekti/projects.html"><button class="worktogethersecond">See our work</button></a>  
+   </div>
+   <div class="contact-overlay" style="display: none;">
+       <div class="contact-details">
+           <p>Phone: <br> +381 65 51 41 758</p>
+           <br>
+           <p>Email: <br> webradiantt@gmail.com</p>
+           <br>
+           <div class="socials-overlay-contact">
+           <p class="instagram-contact-overlay"><a href="https://www.instagram.com/radiantdesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="imgs/instagram.svg" alt=""></a></p>
+           <br>
+           <p><a href="#"><img src="imgs/linkedin.svg" alt=""></a></p>
+         </div>
+           <button id="closeOverlay" class="worktogether">Close</button>
+       </div>
    </div>
 </div>
 
@@ -715,11 +729,158 @@ The name serves as both a <span>promise</span> and a <span>reminder</span> of en
 </div>
 
 <div class="project-request">
+   <div class="initial-requestdiv">
    <img src="./imgs/requestplane.svg" alt="" class="requestplane">
    <div class="project-request-p">
       <p>Thanks for your time and <br> showing an interest in our work. <br><br> This form helps us to quickly understand what your project is about, whilst also clarifying any important questions in advance. <br><br> Please be as detailed <br> and precise as possible. <br> <br> We will reply to you within 48 hours.</p>
    </div>
    <button class="proceed">Proceed</button>
+   </div>
+
+   <div class="request-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Which services do you require?</h4>
+
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>Website - App Development</p>
+         <input type="checkbox" name="development">
+         </div>
+     
+         <div class="request-option">
+         <p>Design | Brand | Animation</p>
+         <input type="checkbox" name="design">
+         </div>
+     
+         <div class="request-option">
+         <p>SEO | Writing </p>
+         <input type="checkbox" name="seo">
+         </div>
+     
+         <div class="request-option">
+         <p>Other</p>
+         <input type="checkbox" name="other">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option">Back</button>
+            <button id="next-option">Next</button>
+         </div>  
+
+     </div>
+
+   </div>
+
+   <div class="second-overlay" style="display: none;">
+      <h4 class="request-overlay-header">How old is your company?</h4>
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>Start-up / Pre-Launch</p>
+         <input type="checkbox" name="startup">
+         </div>
+     
+         <div class="request-option">
+         <p>0-2 Years</p>
+         <input type="checkbox" name="0-2 Years">
+         </div>
+     
+         <div class="request-option">
+         <p>2-5 Years</p>
+         <input type="checkbox" name="2-5 Years">
+         </div>
+     
+         <div class="request-option">
+         <p>5+ Years</p>
+         <input type="checkbox" name="5+ years">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option2">Back</button>
+            <button id="next-option2">Next</button>
+         </div>  
+
+     </div>
+  </div>
+
+  <div class="third-overlay" style="display: none;">
+   <h4 class="request-overlay-header">What is your ideal time-frame?</h4>
+      <div class="options-request">
+
+         <div class="request-option">
+         <p>2-4 Weeks</p>
+         <input type="checkbox" name="2-4 Weeks">
+         </div>
+     
+         <div class="request-option">
+         <p>2 Months</p>
+         <input type="checkbox" name="2 Months">
+         </div>
+     
+         <div class="request-option">
+         <p>3 Months</p>
+         <input type="checkbox" name="3 Months">
+         </div>
+     
+         <div class="request-option">
+         <p>6 Months</p>
+         <input type="checkbox" name="6 Months">
+         </div>
+
+         <div class="button-options">
+            <button id="prev-option3">Back</button>
+            <button id="next-option3">Next</button>
+         </div>  
+
+     </div>
+   </div>
+
+   <div class="fourth-overlay" style="display: none;">
+      <h4 class="request-overlay-header">What is your budget?</h4>
+         <div class="options-request">
+   
+            <div class="request-option">
+            <p>$1000</p>
+            <input type="checkbox" name="$1000">
+            </div>
+        
+            <div class="request-option">
+            <p>$1000 - $2000</p>
+            <input type="checkbox" name="$1000-$2000">
+            </div>
+        
+            <div class="request-option">
+            <p>$2000 - $5000</p>
+            <input type="checkbox" name="$2000-$5000">
+            </div>
+        
+            <div class="request-option">
+            <p>$5000+</p>
+            <input type="checkbox" name="$5000+">
+            </div>
+   
+            <div class="button-options">
+               <button id="prev-option4">Back</button>
+               <button id="next-option4">Next</button>
+            </div>  
+   
+        </div>
+   </div>
+
+   <div class="fifth-overlay" style="display: none;">
+      <h4 class="request-overlay-header">Tell me all you want!</h4>
+      
+      <textarea rows="19" cols="40" placeholder="Additional information..." id="additional_info"></textarea>
+   
+         
+            <div class="button-options">
+               <button id="prev-option5">Back</button>
+               <button id="submit">Submit</button>
+            </div>  
+   
+        
+      </div>
+
 </div>
 
 
@@ -894,7 +1055,7 @@ The name serves as both a <span>promise</span> and a <span>reminder</span> of en
    <div class="footer-content">
       <h1 class="radiant-footer">Radiant</h1>
       <div class="socials">
-         <a href=""><img src="./imgs/instagram.svg" class="instagram" alt=""></a>
+         <a href="https://www.instagram.com/radiantdesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./imgs/instagram.svg" class="instagram" alt=""></a>
          <a href=""><img src="./imgs/dribble.svg" class="dribble" alt=""></a>
          <a href=""><img src="./imgs/linkedin.svg" class="linkedin"  alt=""></a>
          <a href=""><img src="./imgs/behance.svg" class="behance" alt=""></a>
@@ -912,10 +1073,12 @@ The name serves as both a <span>promise</span> and a <span>reminder</span> of en
 <script src="./src/changelang.js"></script>
 <script src="./src/bottomnav.js"></script>
 <script src="./src/infinitescroller.js"></script>
+<script src="./src/contact-modal.js"></script>
 <script src="./src/horizontalscroll.js" ></script>
 <script src="./src/tabswitch.js"></script>
 <script src="./src/counter.js"></script>
-<script src="./src/accordions.js"></script>
+<script src="./src/project-request.js"></script>
 <script src="./src/switchtabs-accordions.js"></script>
+<script src="./src/accordions.js"></script>
 </body>
 </html>
